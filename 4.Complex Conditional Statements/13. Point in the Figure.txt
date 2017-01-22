@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+ 
+namespace Point_in_the_Figure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var h = int.Parse(Console.ReadLine());
+            var x = int.Parse(Console.ReadLine());
+            var y = int.Parse(Console.ReadLine());
+ 
+            var pointX1 = 0; var pointY1 = 0; // downleft
+            var pointX2 = 3 * h;  // downright
+            var pointY3 = h; // outerleft
+            var pointX4 = 3 * h; var pointY4 = h; // outerright
+            var pointX5 = h; var pointY5 = h; // innerleft
+            var pointX6 = 2 * h; var pointY6 = h; // innerright
+            var pointX7 = h;  // long1
+            var pointX8 = 2 * h;  // long2
+            var pointX9 = h; var pointY9 = 4 * h; // upperleft
+            var pointX10 = 2 * h; var pointY10 = 4 * h; // upright
+ 
+            if ((x > pointX1 && x < pointX4 && y > pointY1 && y < pointY3) || (x > pointX5 && x < pointX6 && y > pointY1 && y < pointY9))
+            {
+                Console.WriteLine("inside");
+            }
+            else if (((x < pointX1) || (y < pointY1) || (x > pointX2) || (y > pointY9) || (y > pointY3 && x < pointX5) || (y > pointY3 && x > pointX6)))
+            {
+                Console.WriteLine("outside");
+            }
+            else if (((x >= pointX1 && y == pointY1 && x <= pointX2)
+                || (x >= pointX1 && y == pointY3 && x <= pointX2)
+                || (y >= pointY1 && x == pointX1 && y <= pointY3)
+                || (y >= pointY1 && x == pointX9 && y <= pointY3)
+                || (y >= pointY3 && x == pointX5 && y <= pointY9)
+                || (y >= pointY3 && x == pointX6 && y <= pointY9)
+                || (x >= pointX5 && y == pointY9 && x <= pointX6))
+                || (y >= pointY1 && x == pointX4 && y <= pointY3))
+            {
+                Console.WriteLine("border");
+            }
+        }
+    }
+}

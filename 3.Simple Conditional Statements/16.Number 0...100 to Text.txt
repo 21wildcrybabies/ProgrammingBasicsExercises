@@ -1,0 +1,85 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace Number_0._._._100_to_Text
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var input = int.Parse(Console.ReadLine());
+            var chislo = input;
+            var chislo1 = input;
+            var firstChislo = "";
+            var secondChislo = "";
+            var razlika = 10;
+ 
+
+            if (chislo == 0) { Console.WriteLine("zero"); }
+            else if (chislo < 0) { Console.WriteLine("invalid number"); }
+            else if (chislo <= 15)
+            {
+                if (chislo == 1) { secondChislo = "one"; }
+                if (chislo == 2) { secondChislo = "two"; }
+                if (chislo == 3) { secondChislo = "three"; }
+                if (chislo == 4) { secondChislo = "four"; }
+                if (chislo == 5) { secondChislo = "five"; }
+                if (chislo == 6) { secondChislo = "six"; }
+                if (chislo == 7) { secondChislo = "seven"; }
+                if (chislo == 8) { secondChislo = "eight"; }
+                if (chislo == 9) { secondChislo = "nine"; }
+                if (chislo == 10) { secondChislo = "ten"; }
+                if (chislo == 11) { secondChislo = "eleven"; }
+                if (chislo == 12) { secondChislo = "twelve"; }
+                if (chislo == 13) { secondChislo = "thirteen"; }
+                if (chislo == 14) { secondChislo = "forteen"; }
+                if (chislo == 15) { secondChislo = "fifteen"; }
+                Console.WriteLine(secondChislo);
+            }
+            else if (chislo > 15 && chislo <= 19)
+            {
+                while (input > 10) { input -= razlika; }
+                if (input == 1) { secondChislo = "one"; }
+                if (input == 2) { secondChislo = "two"; }
+                if (input == 3) { secondChislo = "three"; }
+                if (input == 4) { secondChislo = "four"; }
+                if (input == 5) { secondChislo = "five"; }
+                if (input == 6) { secondChislo = "six"; }
+                if (input == 7) { secondChislo = "seven"; }
+                if (input == 8) { secondChislo = "eight"; }
+                if (input == 9) { secondChislo = "nine"; }
+                Console.WriteLine(secondChislo + "" + "teen");
+            }
+            else if (chislo >= 20 && chislo <= 100)
+            {
+                var desetici = 0;
+                while (chislo1 >= 10) { chislo1 -= razlika; }
+                if (chislo > 19) { desetici = (chislo - chislo1) / 10; }
+                if (desetici == 2) { firstChislo = "twenty"; }
+                if (desetici == 3) { firstChislo = "thirty"; }
+                if (desetici == 4) { firstChislo = "fourty"; }
+                if (desetici == 5) { firstChislo = "fifty"; }
+                if (desetici == 6) { firstChislo = "sixty"; }
+                if (desetici == 7) { firstChislo = "seventy"; }
+                if (desetici == 8) { firstChislo = "eighty"; }
+                if (desetici == 9) { firstChislo = "ninety"; }
+                if (desetici == 10) { firstChislo = "one hundred"; }
+                if (chislo1 == 1) { secondChislo = "one"; }
+                if (chislo1 == 2) { secondChislo = "two"; }
+                if (chislo1 == 3) { secondChislo = "three"; }
+                if (chislo1 == 4) { secondChislo = "four"; }
+                if (chislo1 == 5) { secondChislo = "five"; }
+                if (chislo1 == 6) { secondChislo = "six"; }
+                if (chislo1 == 7) { secondChislo = "seven"; }
+                if (chislo1 == 8) { secondChislo = "eight"; }
+                if (chislo1 == 9) { secondChislo = "nine"; }
+                if (chislo1 != 0) { Console.WriteLine(firstChislo + " " + secondChislo); }
+                else { Console.WriteLine(firstChislo); }
+            }
+            else { Console.WriteLine("invalid number"); }
+             
+        }
+    }
+}

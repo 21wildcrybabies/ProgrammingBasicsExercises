@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ForLoopExample
+{
+    static class Program
+    {
+        static void Main()
+        {
+           for (var num = 1; num <= 100; num++)
+            {
+                Console.WriteLine(num);
+            }
+        }
+    }
+}

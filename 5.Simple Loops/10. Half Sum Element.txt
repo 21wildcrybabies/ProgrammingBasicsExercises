@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+ 
+namespace Half_Sum_Element
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var n = int.Parse(Console.ReadLine());
+            var sum = 0;
+            var maxNum = -10000000000 ;
+ 
+            for (int i = 0; i < n; i++)
+            {
+                var numbers = int.Parse(Console.ReadLine());
+                sum += numbers;
+ 
+                if (numbers > maxNum)
+                {
+                    maxNum = numbers;
+                }
+            }
+ 
+            var sumSmaller = (sum - maxNum);
+ 
+            if(sumSmaller == maxNum )
+            {
+                Console.WriteLine("Yes sum " + maxNum);
+            }
+            else
+            {
+                Console.WriteLine("No diff " + Math.Abs (maxNum - sumSmaller));
+            }
+        }
+    }
+}
